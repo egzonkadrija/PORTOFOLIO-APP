@@ -68,18 +68,52 @@
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 
 .trust-item {
+  position: relative;
   display: grid;
-  gap: 10px;
-  padding: 20px 22px;
-  border-top: 1px solid var(--line-strong);
-  background: rgba(255, 251, 246, 0.4);
+  align-content: start;
+  gap: 16px;
+  min-height: 176px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(248, 241, 232, 0.72)),
+    var(--surface);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.trust-item::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 76px;
+  height: 76px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.trust-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(23, 20, 17, 0.16);
+  box-shadow: var(--shadow-lg);
 }
 
 .trust-item span {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
   color: var(--text-faint);
   font-size: 0.76rem;
   text-transform: uppercase;
@@ -87,12 +121,40 @@
 }
 
 .trust-item strong {
-  max-width: 26ch;
+  position: relative;
+  z-index: 1;
+  max-width: 22ch;
   font-family: "Syne", sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.trust-item:nth-child(2)::before {
+  background:
+    linear-gradient(180deg, rgba(198, 140, 76, 0.28), rgba(198, 140, 76, 0) 74%),
+    linear-gradient(180deg, rgba(29, 107, 87, 0.2), rgba(29, 107, 87, 0) 68%),
+    linear-gradient(180deg, rgba(23, 20, 17, 0.08), rgba(23, 20, 17, 0) 62%);
+  background-size: 14px 100%, 14px 100%, 14px 100%;
+  background-position: 0 0, 24px 6px, 48px 12px;
+  background-repeat: no-repeat;
+}
+
+.trust-item:nth-child(3)::before {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(198, 140, 76, 0.3) 0 9px, transparent 10px),
+    radial-gradient(circle at 50% 50%, transparent 0 19px, rgba(23, 20, 17, 0.12) 20px 21px, transparent 22px),
+    radial-gradient(circle at 50% 50%, transparent 0 31px, rgba(29, 107, 87, 0.18) 32px 33px, transparent 34px);
+  background-repeat: no-repeat;
+}
+
+.trust-item:nth-child(1)::before {
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(29, 107, 87, 0.2), rgba(198, 140, 76, 0.08)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0));
+  clip-path: polygon(0 18%, 100% 0, 86% 84%, 14% 100%);
 }
 
 .hero-stage {
@@ -359,8 +421,127 @@
   background: linear-gradient(145deg, #335d56 0%, #dfe8e3 100%);
 }
 
+.medika-shot {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.medika-shot-bg,
+.medika-shot-tint {
+  position: absolute;
+  inset: 0;
+}
+
+.medika-shot-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.medika-shot-tint {
+  background:
+    linear-gradient(180deg, rgba(10, 18, 18, 0.68) 0%, rgba(10, 18, 18, 0.24) 46%, rgba(10, 18, 18, 0.38) 100%),
+    linear-gradient(145deg, rgba(20, 81, 69, 0.42), rgba(198, 140, 76, 0.14));
+}
+
+.medika-shot-header,
+.medika-shot-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.medika-shot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(8, 18, 18, 0.24);
+  backdrop-filter: blur(10px);
+}
+
+.medika-shot-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.medika-shot-brand em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.medika-shot-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+}
+
+.medika-shot-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.medika-shot-copy {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.medika-shot-copy p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.medika-shot-copy strong {
+  max-width: 16ch;
+  color: #fff;
+  font-family: "Syne", sans-serif;
+  font-size: 1.45rem;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
 .case-poster--hotel {
   background: linear-gradient(145deg, #cba172 0%, #f5e5d3 100%);
+}
+
+.hotel-shot-image,
+.hotel-shot-fade {
+  position: absolute;
+  inset: 0;
+}
+
+.hotel-shot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+}
+
+.hotel-shot-fade {
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.02) 0%, rgba(8, 8, 8, 0) 38%, rgba(8, 8, 8, 0.1) 100%);
+  pointer-events: none;
 }
 
 .case-poster--github {

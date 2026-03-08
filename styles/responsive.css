@@ -105,8 +105,8 @@
 
 @media (max-width: 560px) {
   .trust-item {
-    padding: 18px 0;
-    background: transparent;
+    min-height: 0;
+    padding: 20px;
   }
 
   .hero-name {
