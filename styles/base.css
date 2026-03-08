@@ -9,6 +9,7 @@
   --line: rgba(23, 20, 17, 0.1);
   --line-strong: rgba(23, 20, 17, 0.18);
   --accent: #1d6b57;
+  --olive: #5f6846;
   --accent-soft: rgba(29, 107, 87, 0.1);
   --highlight: #c68c4c;
   --highlight-soft: rgba(198, 140, 76, 0.14);
@@ -159,6 +160,10 @@ ul {
   margin-top: 18px;
   color: var(--text-soft);
   font-size: 1.02rem;
+}
+
+.title-olive {
+  color: var(--olive);
 }
 
 [data-reveal] {
