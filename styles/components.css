@@ -21,10 +21,20 @@
 }
 
 .brand {
-  font-family: "Syne", sans-serif;
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text);
+  transition: opacity var(--transition);
+}
+
+.brand:hover {
+  opacity: 0.72;
+}
+
+.brand-mark {
+  width: 46px;
+  height: auto;
+  display: block;
 }
 
 .nav-menu {
