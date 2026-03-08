@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egzoni | Developer Portfolio</title>
+  <meta
+    name="description"
+    content="Developer portfolio for Egzoni, focused on polished product interfaces, clear implementation, and refined motion."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Egzoni home">Egzoni</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        aria-label="Open navigation"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="navMenu" data-menu-panel>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home" data-section="home">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal data-stagger="0">
+          <p class="eyebrow">Independent Developer</p>
+          <h1 class="hero-title">Calm digital experiences built with precision.</h1>
+          <p class="hero-summary">
+            Designing and building modern web experiences with clarity, precision, and performance in mind.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View selected work</a>
+            <a href="mailto:egzon@oninova.net" class="btn btn-secondary">Email me</a>
+          </div>
+          <p class="hero-cred">
+            Available for freelance work across React, TypeScript, Node.js, and interface-led product builds.
+          </p>
+        </div>
+
+        <div class="hero-stage" data-reveal data-stagger="1">
+          <article class="stage-card stage-card--feature">
+            <p class="stage-label">Working Style</p>
+            <h2>Less clutter, better hierarchy, and motion that supports the content.</h2>
+            <div class="stage-list">
+              <div class="stage-row">
+                <span>01</span>
+                <p>Focused page structure with fewer but stronger sections</p>
+              </div>
+              <div class="stage-row">
+                <span>02</span>
+                <p>Clear project presentation with direct, outcome-led copy</p>
+              </div>
+              <div class="stage-row">
+                <span>03</span>
+                <p>Refined interactions instead of decorative visual overload</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section" id="work" data-section="work">
+      <div class="container">
+        <div class="section-heading" data-reveal data-stagger="0">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Public projects pulled directly from my GitHub.</h2>
+          <p class="section-summary">
+            Current public work includes booking, hospitality, and portfolio builds pulled directly from my GitHub.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="case-study case-study--featured" data-reveal data-stagger="1">
+            <div class="case-copy">
+              <p class="case-index">01</p>
+              <h3>Fjolla Medika</h3>
+              <p class="case-role">Medical booking app focused on clear navigation, service discovery, and appointment-ready structure</p>
+              <p class="case-description">
+                A real project from my GitHub built for a healthcare brand. The goal was a cleaner front-end
+                experience with easier access to treatments, information, and booking-related actions.
+              </p>
+              <ul class="case-results">
+                <li>Structured healthcare service presentation</li>
+                <li>Booking-oriented user flow</li>
+                <li>Public repository with shipped front-end work</li>
+              </ul>
+              <div class="case-footer">
+                <div class="case-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Booking App</span>
+                </div>
+                <a href="https://github.com/egzonkadrija/fjolla-medika" class="text-link" target="_blank" rel="noreferrer">Open repository</a>
+              </div>
+            </div>
+            <div class="case-poster case-poster--medika" data-parallax aria-hidden="true">
+              <div class="poster-window poster-window--large"></div>
+              <div class="poster-window poster-window--small"></div>
+              <div class="poster-line"></div>
+              <div class="poster-line poster-line--short"></div>
+            </div>
+          </article>
+
+          <article class="case-study case-study--compact" data-reveal data-stagger="2">
+            <div class="case-copy">
+              <p class="case-index">02</p>
+              <h3>Premium Park Hotel</h3>
+              <p class="case-description">
+                A hospitality website project published on GitHub, designed around premium presentation, cleaner visual hierarchy, and a more polished browsing flow.
+              </p>
+              <div class="case-tags">
+                <span>HTML</span>
+                <span>Hospitality</span>
+                <span>Website UI</span>
+              </div>
+              <a href="https://github.com/egzonkadrija/premium-park-hotel" class="text-link case-link" target="_blank" rel="noreferrer">View on GitHub</a>
+            </div>
+            <div class="case-poster case-poster--hotel" data-parallax aria-hidden="true">
+              <div class="poster-stack"></div>
+              <div class="poster-stack poster-stack--offset"></div>
+            </div>
+          </article>
+
+          <article class="case-study case-study--compact" data-reveal data-stagger="3">
+            <div class="case-copy">
+              <p class="case-index">03</p>
+              <h3>Portfolio App</h3>
+              <p class="case-description">
+                The portfolio itself is published as a public repository, focused on calm presentation, tighter layout control, and a cleaner front-end system.
+              </p>
+              <div class="case-tags">
+                <span>Portfolio</span>
+                <span>UI System</span>
+                <span>Responsive</span>
+              </div>
+              <a href="https://github.com/egzonkadrija/portfolio-app" class="text-link case-link" target="_blank" rel="noreferrer">View on GitHub</a>
+            </div>
+            <div class="case-poster case-poster--portfolio" data-parallax aria-hidden="true">
+              <div class="poster-grid"></div>
+              <div class="poster-dot"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about" data-section="about">
+      <div class="container about-grid">
+        <div class="about-copy" data-reveal data-stagger="0">
+          <p class="eyebrow">About</p>
+          <h2>I build pages and products that feel composed instead of crowded.</h2>
+          <p>
+            My work sits between visual taste and engineering rigor: fewer moving parts, clearer content structure,
+            and interfaces that stay understandable even when the design gets ambitious.
+          </p>
+        </div>
+
+        <div class="about-panel" data-reveal data-stagger="1">
+          <div class="about-principle">
+            <span>01</span>
+            <div>
+              <h3>Clear hierarchy</h3>
+              <p>Every page should tell you what matters first without extra noise.</p>
+            </div>
+          </div>
+          <div class="about-principle">
+            <span>02</span>
+            <div>
+              <h3>Refined motion</h3>
+              <p>Animation should add rhythm and guidance, not distraction.</p>
+            </div>
+          </div>
+          <div class="about-principle">
+            <span>03</span>
+            <div>
+              <h3>Clean implementation</h3>
+              <p>Good-looking work stays valuable only when the code remains solid underneath it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" data-section="contact">
+      <div class="container contact-panel" data-reveal data-stagger="0">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Need a sharper portfolio or a cleaner front-end build?</h2>
+          <p>
+            I am available for selective freelance work, redesigns, and interface-led implementation.
+            If you have something in mind, send a note and I will get back to you.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a href="mailto:egzon@oninova.net" class="btn btn-primary">egzon@oninova.net</a>
+          <button class="btn btn-secondary" type="button" data-copy-email="egzon@oninova.net">Copy email</button>
+          <p class="contact-note">Usually replying within 1-2 business days.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-copy">
+        <p>Focused portfolio, product-minded execution, and calm interaction design.</p>
+        <p>&copy; <span data-current-year>2026</span> Egzoni.</p>
+      </div>
+      <a
+        href="https://github.com/egzonkadrija"
+        class="btn btn-secondary footer-btn"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Visit GitHub
+      </a>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
