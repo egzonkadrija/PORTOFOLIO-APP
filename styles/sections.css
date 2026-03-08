@@ -2,6 +2,10 @@
   padding-top: 48px;
 }
 
+.trust {
+  padding-top: 8px;
+}
+
 .hero-grid,
 .about-grid {
   display: grid;
@@ -22,13 +26,22 @@
   max-width: 640px;
 }
 
-.hero-title {
+.hero-name {
   max-width: 620px;
   margin-top: 16px;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.7rem, 6.2vw, 4.7rem);
+  font-size: clamp(3.2rem, 8vw, 5.8rem);
   line-height: 0.98;
   letter-spacing: -0.06em;
+}
+
+.hero-title {
+  max-width: 560px;
+  margin-top: 12px;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
 }
 
 .hero-summary {
@@ -50,6 +63,36 @@
   margin-top: 20px;
   color: var(--text-faint);
   font-size: 0.92rem;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.trust-item {
+  display: grid;
+  gap: 10px;
+  padding: 20px 22px;
+  border-top: 1px solid var(--line-strong);
+  background: rgba(255, 251, 246, 0.4);
+}
+
+.trust-item span {
+  color: var(--text-faint);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.trust-item strong {
+  max-width: 26ch;
+  font-family: "Syne", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 .hero-stage {
@@ -170,6 +213,7 @@
   margin-top: 18px;
   color: var(--text-soft);
   font-size: 1.02rem;
+  max-width: 60ch;
 }
 
 .work-grid {

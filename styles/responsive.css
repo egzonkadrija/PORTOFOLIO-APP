@@ -1,5 +1,6 @@
 @media (max-width: 1080px) {
   .hero-grid,
+  .trust-grid,
   .case-study--featured,
   .about-grid,
   .contact-panel {
@@ -73,6 +74,7 @@
     padding-top: 34px;
   }
 
+  .hero-name,
   .hero-title {
     max-width: 640px;
   }
@@ -102,8 +104,17 @@
 }
 
 @media (max-width: 560px) {
+  .trust-item {
+    padding: 18px 0;
+    background: transparent;
+  }
+
+  .hero-name {
+    font-size: clamp(2.8rem, 14vw, 4.1rem);
+  }
+
   .hero-title {
-    font-size: clamp(2.35rem, 13vw, 3.6rem);
+    font-size: clamp(1.35rem, 6vw, 1.7rem);
   }
 
   .hero-actions,
