@@ -843,6 +843,10 @@
   gap: 18px;
 }
 
+.contact-phone {
+  color: var(--text);
+}
+
 .contact-note {
   color: var(--text-faint);
   font-size: 0.92rem;
