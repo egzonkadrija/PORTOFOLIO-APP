@@ -359,6 +359,14 @@
   background: var(--highlight);
 }
 
+.case-study--featured .case-results li {
+  padding-left: 0;
+}
+
+.case-study--featured .case-results li::before {
+  display: none;
+}
+
 .case-footer {
   display: flex;
   align-items: center;
@@ -443,7 +451,7 @@
 .medika-shot-tint {
   background:
     linear-gradient(180deg, rgba(10, 18, 18, 0.68) 0%, rgba(10, 18, 18, 0.24) 46%, rgba(10, 18, 18, 0.38) 100%),
-    linear-gradient(145deg, rgba(20, 81, 69, 0.42), rgba(198, 140, 76, 0.14));
+    linear-gradient(145deg, rgba(20, 81, 69, 0.28), rgba(122, 182, 216, 0.08));
 }
 
 .medika-shot-header,
@@ -644,7 +652,6 @@
   padding: 26px;
   border-radius: var(--radius-lg);
   align-self: stretch;
-  margin-top: 58px;
 }
 
 .about-principle {
