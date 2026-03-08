@@ -255,10 +255,42 @@
           </p>
         </div>
 
-        <div class="contact-actions">
-          <a href="mailto:egzon@oninova.net" class="btn btn-primary">egzon@oninova.net</a>
-          <button class="btn btn-secondary" type="button" data-copy-email="egzon@oninova.net">Copy email</button>
-          <p class="contact-note">Usually replying within 1-2 business days.</p>
+        <div class="contact-rail">
+          <form class="contact-form" data-contact-form>
+            <div class="contact-form-grid">
+              <label class="contact-field">
+                <span>Name</span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="contact-field">
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+              <label class="contact-field contact-field--full">
+                <span>Project brief</span>
+                <textarea name="message" rows="5" required></textarea>
+              </label>
+            </div>
+            <div class="contact-actions">
+              <button class="btn btn-primary" type="submit">Start a conversation</button>
+              <button class="btn btn-secondary" type="button" data-copy-email="egzon@oninova.net">Copy email</button>
+            </div>
+          </form>
+
+          <div class="contact-meta">
+            <div class="contact-meta-item">
+              <span>Phone</span>
+              <p><a href="tel:+38975461984" class="text-link">+389 75 461 984</a></p>
+            </div>
+            <div class="contact-meta-item">
+              <span>Social</span>
+              <div class="contact-links">
+                <a href="https://github.com/egzonkadrija" class="text-link" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://oninova.net/" class="text-link" target="_blank" rel="noreferrer">Oninova</a>
+              </div>
+            </div>
+            <p class="contact-note">Usually replying within 1-2 business days.</p>
+          </div>
         </div>
       </div>
     </section>

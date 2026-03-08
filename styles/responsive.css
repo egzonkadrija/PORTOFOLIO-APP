@@ -122,6 +122,10 @@
     display: grid;
   }
 
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
   .stage-card--feature,
   .case-study,
   .about-panel,

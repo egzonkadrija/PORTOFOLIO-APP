@@ -7,6 +7,7 @@ const trackedSections = Array.from(document.querySelectorAll("[data-section]"));
 const parallaxItems = Array.from(document.querySelectorAll("[data-parallax]"));
 const toast = document.querySelector("[data-toast]");
 const yearTarget = document.querySelector("[data-current-year]");
+const contactForm = document.querySelector("[data-contact-form]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(pointer: fine)");
 
@@ -138,6 +139,34 @@ function setupPosterParallax() {
   });
 }
 
+function setupContactForm() {
+  if (!(contactForm instanceof HTMLFormElement)) {
+    return;
+  }
+
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    if (!name || !email || !message) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nProject brief:\n${message}`
+    );
+
+    showToast("Opening your email client.");
+    window.location.href = `mailto:egzon@oninova.net?subject=${subject}&body=${body}`;
+  });
+}
+
 if (menuToggle) {
   menuToggle.addEventListener("click", toggleMenu);
 }
@@ -207,3 +236,4 @@ setHeaderState();
 setActiveNav();
 setupRevealObserver();
 setupPosterParallax();
+setupContactForm();
