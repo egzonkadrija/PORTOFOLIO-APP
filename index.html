@@ -40,6 +40,7 @@
       </button>
       <div class="nav-menu" id="navMenu" data-menu-panel>
         <a href="#work" class="nav-link">Work</a>
+        <a href="#repositories" class="nav-link">Repos</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
@@ -253,6 +254,36 @@
               <div class="poster-dot"></div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="repositories section" id="repositories" data-section="repositories">
+      <div class="container">
+        <div class="section-heading" data-reveal data-stagger="0">
+          <p class="eyebrow">Repositories</p>
+          <h2>Recent public code, pulled into the portfolio directly.</h2>
+          <p class="section-summary">
+            A repository feed gives visitors a faster way to inspect the current codebase, recent activity, and the public projects attached to this portfolio.
+          </p>
+        </div>
+
+        <div class="repository-shell" data-reveal data-stagger="1">
+          <div class="repository-toolbar">
+            <p class="repository-status" data-repository-status>
+              Loading the latest public repositories from GitHub.
+            </p>
+            <a
+              href="https://github.com/egzonkadrija?tab=repositories"
+              class="text-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Browse all repositories
+            </a>
+          </div>
+
+          <div class="repository-grid" data-repository-grid aria-live="polite"></div>
         </div>
       </div>
     </section>
