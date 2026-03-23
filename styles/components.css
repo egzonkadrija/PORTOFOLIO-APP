@@ -2,39 +2,54 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(18px);
   transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .site-header.is-scrolled {
-  background: rgba(15, 23, 42, 0.82);
-  border-bottom-color: var(--line);
-  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.32);
+  background: rgba(4, 8, 13, 0.8);
+  border-bottom: 1px solid rgba(231, 222, 204, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
+  min-height: 88px;
+  gap: 24px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  color: var(--text-main);
-  transition: opacity var(--transition);
-}
-
-.brand:hover {
-  opacity: 0.72;
+  gap: 14px;
+  min-width: 0;
 }
 
 .brand-mark {
-  width: 54px;
+  width: 40px;
   height: auto;
-  display: block;
+  flex: 0 0 auto;
+}
+
+.brand-lockup {
+  display: grid;
+  gap: 2px;
+}
+
+.brand-lockup strong {
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.brand-lockup span {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .nav-menu {
@@ -45,8 +60,8 @@
 
 .nav-link {
   position: relative;
-  color: var(--text-muted);
-  font-size: 0.96rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
   transition: color var(--transition);
 }
 
@@ -54,10 +69,10 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -8px;
-  width: 100%;
+  right: 0;
+  bottom: -7px;
   height: 1px;
-  background: var(--primary);
+  background: var(--accent-strong);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition);
@@ -73,6 +88,10 @@
   transform: scaleX(1);
 }
 
+.nav-link--external {
+  color: var(--accent-strong);
+}
+
 .nav-toggle {
   display: none;
   width: 48px;
@@ -80,7 +99,7 @@
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: rgba(30, 41, 59, 0.88);
+  background: rgba(8, 17, 25, 0.84);
   cursor: pointer;
 }
 
@@ -89,8 +108,8 @@
   width: 18px;
   height: 2px;
   margin: 4px auto;
-  background: var(--text-main);
   border-radius: 999px;
+  background: var(--text-main);
   transition: transform var(--transition), opacity var(--transition);
 }
 
@@ -111,14 +130,15 @@
   align-items: center;
   justify-content: center;
   min-height: 56px;
-  padding: 0 26px;
+  padding: 0 24px;
   border: 1px solid transparent;
   border-radius: 999px;
   font-family: "Syne", sans-serif;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
   cursor: pointer;
-  transition: transform var(--transition), background var(--transition), border-color var(--transition), box-shadow var(--transition), color var(--transition);
+  transition: transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
 }
 
 .btn:hover {
@@ -126,25 +146,24 @@
 }
 
 .btn-primary {
-  background: var(--primary);
-  color: var(--text-main);
+  background: var(--accent);
+  color: #090d13;
   box-shadow: var(--shadow-soft);
 }
 
 .btn-primary:hover {
-  background: var(--accent);
+  background: var(--accent-strong);
 }
 
 .btn-secondary {
-  background: rgba(30, 41, 59, 0.88);
-  color: var(--text-main);
   border-color: var(--line-strong);
+  background: rgba(8, 17, 25, 0.36);
+  color: var(--text-main);
 }
 
 .btn-secondary:hover {
-  background: rgba(59, 130, 246, 0.14);
-  border-color: var(--primary);
-  color: var(--accent);
+  border-color: var(--accent-strong);
+  background: rgba(213, 162, 92, 0.08);
 }
 
 .toast {
@@ -156,7 +175,7 @@
   padding: 14px 18px;
   border: 1px solid var(--line-strong);
   border-radius: 18px;
-  background: rgba(30, 41, 59, 0.96);
+  background: rgba(6, 12, 19, 0.95);
   color: var(--text-main);
   box-shadow: var(--shadow-soft);
   opacity: 0;

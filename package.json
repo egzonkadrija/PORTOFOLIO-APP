@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio site with a minimal local development server.",
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "start": "node scripts/dev-server.js"
+  }
+}

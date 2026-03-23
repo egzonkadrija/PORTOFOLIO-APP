@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Egzoni | Developer Portfolio</title>
+  <title>Egzon Kadrija | Front-end Portfolio</title>
   <meta
     name="description"
-    content="Developer portfolio for Egzoni, focused on polished product interfaces, clear implementation, and refined motion."
+    content="Portfolio for Egzon Kadrija, building brand-led websites and refined front-end interfaces."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +23,14 @@
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="https://oninova.net/" aria-label="Visit Oninova" target="_blank" rel="noreferrer">
+      <a class="brand" href="#home" aria-label="Back to top">
         <img src="assets/oninova-mark.svg" alt="" class="brand-mark" width="88" height="80">
+        <span class="brand-lockup">
+          <strong>Egzon Kadrija</strong>
+          <span>Oninova / Front-end Developer</span>
+        </span>
       </a>
+
       <button
         class="nav-toggle"
         type="button"
@@ -38,98 +43,50 @@
         <span></span>
         <span></span>
       </button>
+
       <div class="nav-menu" id="navMenu" data-menu-panel>
         <a href="#work" class="nav-link">Work</a>
-        <a href="#about" class="nav-link">About</a>
+        <a href="#about" class="nav-link">Approach</a>
         <a href="#contact" class="nav-link">Contact</a>
+        <a
+          href="https://github.com/egzonkadrija"
+          class="nav-link nav-link--external"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero section" id="home" data-section="home">
-      <div class="container hero-grid">
+    <section class="hero" id="home" data-section="home">
+      <div class="hero-backdrop" aria-hidden="true">
+        <img src="assets/premium-park-live.png" alt="" class="hero-backdrop-image">
+        <div class="hero-backdrop-overlay"></div>
+        <div class="hero-backdrop-glow"></div>
+      </div>
+
+      <div class="hero-shell container">
         <div class="hero-copy" data-reveal data-stagger="0">
           <p class="eyebrow">Independent Developer</p>
           <h1 class="hero-name">Egzon Kadrija</h1>
-          <h2 class="hero-title title-primary">Calm digital experiences built with precision.</h2>
           <p class="hero-summary">
-            I design and build front-end systems, portfolio sites, and product pages with clear structure, restrained motion, and clean implementation.
+            Front-end websites with clear hierarchy.
           </p>
           <div class="hero-actions">
-            <a href="#work" class="btn btn-primary">View selected work</a>
-            <a href="https://github.com/egzonkadrija" class="btn btn-secondary" target="_blank" rel="noreferrer">Visit GitHub</a>
+            <a href="#work" class="btn btn-primary">Browse selected work</a>
+            <a href="#contact" class="btn btn-secondary">Start a conversation</a>
           </div>
         </div>
 
-        <div class="hero-stage" data-reveal data-stagger="1">
-          <article class="stage-card stage-card--feature">
-            <p class="stage-label">Working Style</p>
-            <h2>Less clutter, better hierarchy, and motion that supports the content.</h2>
-            <div class="stage-list">
-              <div class="stage-row">
-                <span>01</span>
-                <p>Focused page structure with fewer but stronger sections</p>
-              </div>
-              <div class="stage-row">
-                <span>02</span>
-                <p>Clear project presentation with direct, outcome-led copy</p>
-              </div>
-              <div class="stage-row">
-                <span>03</span>
-                <p>Refined interactions instead of decorative visual overload</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="trust section">
-      <div class="container">
-        <div class="trust-grid" data-reveal data-stagger="0">
-          <div class="trust-item">
-            <span>Selected focus</span>
-            <strong>Front-end systems, portfolio sites, and product UI</strong>
+        <div class="hero-aside" data-reveal data-stagger="1">
+          <div class="hero-meta">
+            <p><span>Base</span>Kosovo / Remote</p>
+            <p><span>Stack</span>HTML, CSS, JavaScript, TypeScript</p>
+            <p><span>Mode</span>Small teams and focused freelance builds</p>
           </div>
-          <div class="trust-item">
-            <span>Working stack</span>
-            <strong>HTML, CSS, JavaScript, React, TypeScript, Node.js</strong>
-          </div>
-          <div class="trust-item">
-            <span>Current status</span>
-            <strong>Open for selective freelance and redesign work</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="proof section" id="proof" data-section="proof">
-      <div class="container">
-        <div class="section-heading" data-reveal data-stagger="0">
-          <p class="eyebrow">Proof</p>
-          <h2>Work Samples</h2>
-          <p class="section-summary">
-            The portfolio is built around public work, direct scope notes, and links that let people check the result instead of guessing from presentation alone.
-          </p>
-        </div>
-
-        <div class="proof-grid">
-          <article class="proof-card" data-reveal data-stagger="1">
-            <span>01</span>
-            <h3>Public code attached</h3>
-            <p>Each featured project links back to a public repository, so implementation quality can be reviewed alongside the design decisions.</p>
-          </article>
-          <article class="proof-card" data-reveal data-stagger="2">
-            <span>02</span>
-            <h3>Live work included</h3>
-            <p>The portfolio includes current-site access and a live hospitality build, which makes the work easier to verify in a browser instead of a static image.</p>
-          </article>
-          <article class="proof-card" data-reveal data-stagger="3">
-            <span>03</span>
-            <h3>Front-end specialization</h3>
-            <p>The projects stay focused on interface clarity, motion restraint, and cleaner content structure rather than broad claims across unrelated disciplines.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -138,223 +95,213 @@
       <div class="container">
         <div class="section-heading" data-reveal data-stagger="0">
           <p class="eyebrow">Selected Work</p>
-          <h2 class="title-primary">Public work, shown with honest scope.</h2>
-          <p class="section-summary">
-            A tighter selection of public repositories across healthcare, hospitality, local business, real estate, and the portfolio system you are viewing now.
-          </p>
+          <h2>Selected work.</h2>
         </div>
 
-        <div class="work-grid">
-          <article class="case-study case-study--featured" data-reveal data-stagger="1">
-            <div class="case-copy">
-              <p class="case-index">01</p>
-              <h3>Fjolla Medika</h3>
-              <p class="case-role">Front-end booking interface structured around service discovery, clearer treatment pages, and appointment-ready user flow</p>
-              <p class="case-description">
-                A healthcare-focused front-end build from my public GitHub. The outcome was a clearer service hierarchy, easier treatment browsing, and a booking path that feels more guided instead of scattered.
-              </p>
-              <ul class="case-results">
-                <li>Service pages reorganized for faster scanning and fewer dead moments</li>
-                <li>Booking-oriented sections tightened around clearer decision points</li>
-                <li>Public repository included so the front-end implementation can be inspected directly</li>
-              </ul>
-              <div class="case-footer">
-                <div class="case-tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>Healthcare UI</span>
-                </div>
-                <div class="case-links">
-                  <a href="https://fjollamedika.netlify.app/" class="text-link" target="_blank" rel="noreferrer">Live site</a>
-                  <a href="https://github.com/egzonkadrija/fjolla-medika" class="text-link" target="_blank" rel="noreferrer">Open repository</a>
-                </div>
-              </div>
-            </div>
-            <div class="case-poster case-poster--medika" data-parallax aria-hidden="true">
-              <div class="medika-shot">
-                <img src="assets/fjolla-medika-hero-bg.png" alt="" class="medika-shot-bg">
-                <div class="medika-shot-tint"></div>
-                <div class="medika-shot-header">
-                  <div class="medika-shot-brand">
-                    <img src="assets/fjolla-medika-favicon.svg" alt="" class="medika-shot-icon">
-                    <span>Fjolla <em>Medika</em></span>
-                  </div>
-                  <div class="medika-shot-nav">
-                    <span>Home</span>
-                    <span>Services</span>
-                    <span>Appointment</span>
-                  </div>
-                </div>
-                <div class="medika-shot-copy">
-                  <p>Dental clinic website header</p>
-                  <strong>Your Smile, Our Priority</strong>
-                </div>
-              </div>
-            </div>
-          </article>
+        <div class="work-layout">
+          <div class="project-list" data-reveal data-stagger="1">
+            <button
+              class="project-item is-active"
+              type="button"
+              aria-pressed="true"
+              data-project-trigger
+              data-project-label="Featured project"
+              data-project-title="Premium Park Hotel"
+              data-project-role="Hospitality presentation site"
+              data-project-summary="A calmer hospitality front page with clearer hierarchy."
+              data-project-image="assets/premium-park-live.png"
+              data-project-alt="Preview of the Premium Park Hotel website"
+              data-project-live="https://premiumparkhotel.netlify.app/"
+              data-project-code="https://github.com/egzonkadrija/premium-park-hotel"
+              data-project-tags="HTML|Hospitality|Brand-first"
+            >
+              <span class="project-index">01</span>
+              <span class="project-main">
+                <strong>Premium Park Hotel</strong>
+                <span>Hospitality presentation site</span>
+              </span>
+            </button>
 
-          <article class="case-study case-study--compact" data-reveal data-stagger="2">
-            <div class="case-copy">
-              <p class="case-index">02</p>
-              <h3>Premium Park Hotel</h3>
-              <p class="case-role">Hospitality presentation work built on a public fork, included here with that scope made explicit</p>
-              <p class="case-description">
-                A hospitality-oriented website build focused on premium presentation and a cleaner browsing flow. The value here is in calmer pacing, stronger visual hierarchy, and a more deliberate browsing rhythm across the experience.
+            <button
+              class="project-item project-item--with-thumb"
+              type="button"
+              aria-pressed="false"
+              data-project-trigger
+              data-project-label="Healthcare build"
+              data-project-title="Fjolla Medika"
+              data-project-role="Healthcare booking interface"
+              data-project-summary="A cleaner clinic website with a more direct booking path."
+              data-project-image="assets/fjolla-medika-live.png"
+              data-project-alt="Preview of the Fjolla Medika website"
+              data-project-live="https://fjollamedika.netlify.app/"
+              data-project-code="https://github.com/egzonkadrija/fjolla-medika"
+              data-project-tags="HTML|Healthcare UI|Appointments"
+            >
+              <span class="project-index">02</span>
+              <span class="project-thumb" aria-hidden="true">
+                <img src="assets/fjolla-medika-hero.jpg" alt="">
+              </span>
+              <span class="project-main">
+                <strong>Fjolla Medika</strong>
+                <span>Healthcare booking interface</span>
+              </span>
+            </button>
+
+            <button
+              class="project-item"
+              type="button"
+              aria-pressed="false"
+              data-project-trigger
+              data-project-label="Portfolio system"
+              data-project-title="Portfolio App"
+              data-project-role="Current portfolio rebuild"
+              data-project-summary="This site, rebuilt to feel more editorial and less boxed-in."
+              data-project-image="assets/portfolio-card.png"
+              data-project-alt="Preview of the portfolio app"
+              data-project-live="#home"
+              data-project-code="https://github.com/egzonkadrija/PORTOFOLIO-APP"
+              data-project-tags="Portfolio|UI System|Motion"
+            >
+              <span class="project-index">03</span>
+              <span class="project-main">
+                <strong>Portfolio App</strong>
+                <span>Current portfolio rebuild</span>
+              </span>
+            </button>
+
+            <button
+              class="project-item"
+              type="button"
+              aria-pressed="false"
+              data-project-trigger
+              data-project-label="Local business site"
+              data-project-title="TiAmo"
+              data-project-role="Restaurant and local brand website"
+              data-project-summary="A brand-led layout with a sharper hero and simpler flow."
+              data-project-image="assets/tiamo-card.png"
+              data-project-alt="Preview of the TiAmo website"
+              data-project-live="https://tiamo.mk/"
+              data-project-code="https://github.com/egzonkadrija/TiAmo"
+              data-project-tags="HTML|Local Business|Brand UI"
+            >
+              <span class="project-index">04</span>
+              <span class="project-main">
+                <strong>TiAmo</strong>
+                <span>Restaurant and local brand website</span>
+              </span>
+            </button>
+
+            <button
+              class="project-item"
+              type="button"
+              aria-pressed="false"
+              data-project-trigger
+              data-project-label="Application interface"
+              data-project-title="Real Estate App"
+              data-project-role="Property browsing app"
+              data-project-summary="A cleaner browsing flow with clearer listing hierarchy."
+              data-project-image="assets/real-estate-card.png"
+              data-project-alt="Preview of the real estate app"
+              data-project-live="https://real-estate-app-gamma-seven.vercel.app"
+              data-project-code="https://github.com/egzonkadrija/real-estate-app"
+              data-project-tags="TypeScript|Real Estate|App UI"
+            >
+              <span class="project-index">05</span>
+              <span class="project-main">
+                <strong>Real Estate App</strong>
+                <span>Property browsing app</span>
+              </span>
+            </button>
+          </div>
+
+          <aside class="work-preview" data-reveal data-stagger="2">
+            <div class="preview-media" data-parallax>
+              <img
+                src="assets/premium-park-live.png"
+                alt="Preview of the Premium Park Hotel website"
+                class="preview-image"
+                data-project-image-target
+              >
+            </div>
+
+            <div class="preview-copy">
+              <h3 data-project-title-target>Premium Park Hotel</h3>
+              <p class="preview-summary" data-project-summary-target>
+                A calmer hospitality front page with clearer hierarchy.
               </p>
-              <ul class="case-results">
-                <li>Presentation flow refined to feel more premium and less crowded</li>
-                <li>Content rhythm improved so browsing stays clearer from section to section</li>
-                <li>Scope kept explicit: interface work presented honestly on top of a public fork</li>
-              </ul>
-              <div class="case-tags">
+
+              <div class="preview-tags" data-project-tags-target>
                 <span>HTML</span>
                 <span>Hospitality</span>
-                <span>Forked Base</span>
+                <span>Brand-first</span>
               </div>
-              <div class="case-links">
-                <a href="https://premiumparkhotel.netlify.app/" class="text-link case-link" target="_blank" rel="noreferrer">Live site</a>
-                <a href="https://github.com/egzonkadrija/premium-park-hotel" class="text-link case-link" target="_blank" rel="noreferrer">View on GitHub</a>
-              </div>
-            </div>
-            <div class="case-poster case-poster--hotel" data-parallax aria-hidden="true">
-              <img src="assets/premium-park-live.png" alt="" class="hotel-shot-image">
-              <div class="hotel-shot-fade"></div>
-            </div>
-          </article>
 
-          <article class="case-study case-study--compact" data-reveal data-stagger="3">
-            <div class="case-copy">
-              <p class="case-index">03</p>
-              <h3>Portfolio App</h3>
-              <p class="case-role">Current single-page portfolio system with a custom editorial layout and lightweight interaction layer</p>
-              <p class="case-description">
-                This portfolio is also a public repository. It was rebuilt into a simpler work-first system with clearer section priority, calmer motion, and a contact path that gets to the point faster.
-              </p>
-              <ul class="case-results">
-                <li>Editorial layout reduced into a more direct work-first structure</li>
-                <li>Motion and spacing tightened so the page feels calmer under interaction</li>
-                <li>Current site and repository both available for direct review</li>
-              </ul>
-              <div class="case-tags">
-                <span>Portfolio</span>
-                <span>UI System</span>
-                <span>Motion</span>
-              </div>
-              <div class="case-links">
-                <a href="#home" class="text-link case-link">Current site</a>
-                <a href="https://github.com/egzonkadrija/PORTOFOLIO-APP" class="text-link case-link" target="_blank" rel="noreferrer">View on GitHub</a>
+              <div class="preview-links">
+                <a
+                  href="https://premiumparkhotel.netlify.app/"
+                  class="text-link"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-project-live-target
+                >
+                  Live site
+                </a>
+                <a
+                  href="https://github.com/egzonkadrija/premium-park-hotel"
+                  class="text-link"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-project-code-target
+                >
+                  View on GitHub
+                </a>
               </div>
             </div>
-            <div class="case-poster case-poster--portfolio" data-parallax aria-hidden="true">
-              <img src="assets/portfolio-card.png" alt="" class="case-poster-image">
-              <div class="case-poster-fade"></div>
-            </div>
-          </article>
-
-          <article class="case-study case-study--compact" data-reveal data-stagger="4">
-            <div class="case-copy">
-              <p class="case-index">04</p>
-              <h3>TiAmo</h3>
-              <p class="case-role">Local business presentation site shaped around stronger brand tone, cleaner service browsing, and a more confident hero section</p>
-              <p class="case-description">
-                A barbershop-style landing page built as a public repository. The work leans on stronger visual rhythm, cleaner section pacing, and a sharper presentation of services and brand cues.
-              </p>
-              <ul class="case-results">
-                <li>Hero and service sections tightened into a clearer first-scroll story</li>
-                <li>Brand presentation pushed toward a more deliberate, premium feel</li>
-                <li>Public repository and live site both available for direct review</li>
-              </ul>
-              <div class="case-tags">
-                <span>HTML</span>
-                <span>Local Business</span>
-                <span>Brand UI</span>
-              </div>
-              <div class="case-links">
-                <a href="https://tiamo.mk/" class="text-link case-link" target="_blank" rel="noreferrer">Live site</a>
-                <a href="https://github.com/egzonkadrija/TiAmo" class="text-link case-link" target="_blank" rel="noreferrer">View on GitHub</a>
-              </div>
-            </div>
-            <div class="case-poster case-poster--tiamo" data-parallax aria-hidden="true">
-              <img src="assets/tiamo-card.png" alt="" class="case-poster-image">
-              <div class="case-poster-fade"></div>
-              <p class="poster-badge">Brand-first layout</p>
-            </div>
-          </article>
-
-          <article class="case-study case-study--compact" data-reveal data-stagger="5">
-            <div class="case-copy">
-              <p class="case-index">05</p>
-              <h3>Real Estate App</h3>
-              <p class="case-role">Property browsing interface built as a fuller application flow with listing discovery, clearer navigation, and live deployment</p>
-              <p class="case-description">
-                A real estate platform app focused on giving listings more structure and making the browsing flow feel steadier across search, detail views, and page-to-page navigation.
-              </p>
-              <ul class="case-results">
-                <li>Property browsing shaped into a more app-like discovery flow</li>
-                <li>TypeScript-based implementation published with a live deployment</li>
-                <li>Repository available so the application structure can be reviewed directly</li>
-              </ul>
-              <div class="case-tags">
-                <span>TypeScript</span>
-                <span>Real Estate</span>
-                <span>App UI</span>
-              </div>
-              <div class="case-links">
-                <a href="https://real-estate-app-gamma-seven.vercel.app" class="text-link case-link" target="_blank" rel="noreferrer">Live site</a>
-                <a href="https://github.com/egzonkadrija/real-estate-app" class="text-link case-link" target="_blank" rel="noreferrer">View on GitHub</a>
-              </div>
-            </div>
-            <div class="case-poster case-poster--real-estate" data-parallax aria-hidden="true">
-              <img src="assets/real-estate-card.png" alt="" class="case-poster-image">
-              <div class="case-poster-fade"></div>
-              <p class="poster-badge">Listing flow</p>
-            </div>
-          </article>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="about section" id="about" data-section="about">
-      <div class="container about-grid">
+      <div class="container about-layout">
         <div class="about-copy" data-reveal data-stagger="0">
-          <p class="eyebrow">About</p>
-          <h2 class="title-primary">I work where visual polish meets implementation discipline.</h2>
-          <p>
-            I focus on front-end work that stays clear under pressure: portfolio sites, landing pages, and interface builds that need stronger hierarchy, steadier motion, and cleaner code underneath. Most of the time, I step in when a product already looks close but still feels inconsistent, crowded, or unfinished in the details. That is usually where I do my best work. I refine the structure, improve the pacing between sections, simplify what does not need extra weight, and make the interface feel more intentional from the first screen to the last interaction. The goal is not just to make a page look better, but to make it read better, move better, and hold together more convincingly as a complete experience.
-          </p>
+          <p class="eyebrow">Approach</p>
+          <h2>Less chrome, better hierarchy, stronger first impressions.</h2>
         </div>
 
-        <div class="about-panel" data-reveal data-stagger="1">
-          <div class="about-principle">
+        <div class="principles" data-reveal data-stagger="1">
+          <article class="principle">
             <span>01</span>
             <div>
-              <h3>Structure before effects</h3>
-              <p>I start with readable layout, stronger spacing, and clearer content order before adding polish.</p>
+              <h3>One dominant idea per section</h3>
+              <p>If a section tries to do too much, it gets cut back.</p>
             </div>
-          </div>
-          <div class="about-principle">
+          </article>
+
+          <article class="principle">
             <span>02</span>
             <div>
-              <h3>Motion with restraint</h3>
-              <p>Animation should support rhythm and attention, not compete with the content itself.</p>
+              <h3>Real imagery over decorative UI</h3>
+              <p>Project visuals should carry the atmosphere.</p>
             </div>
-          </div>
-          <div class="about-principle">
+          </article>
+
+          <article class="principle">
             <span>03</span>
             <div>
-              <h3>Ship cleanly</h3>
-              <p>Good-looking interfaces stay useful only when the implementation is maintainable and stable.</p>
+              <h3>Motion used for depth and orientation</h3>
+              <p>Motion should clarify what matters, not compete with it.</p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="contact section" id="contact" data-section="contact">
-      <div class="container contact-panel" data-reveal data-stagger="0">
+      <div class="container contact-layout" data-reveal data-stagger="0">
         <div class="contact-copy">
           <p class="eyebrow">Contact</p>
-          <h2 class="title-primary">Available for select <br>freelance work.<br>Reach out.</h2>
+          <h2>Need a sharper front-end presence without extra noise?</h2>
         </div>
 
         <div class="contact-rail">
@@ -364,15 +311,18 @@
                 <span>Name</span>
                 <input type="text" name="name" autocomplete="name" required>
               </label>
+
               <label class="contact-field">
                 <span>Email</span>
                 <input type="email" name="email" autocomplete="email" required>
               </label>
+
               <label class="contact-field contact-field--full">
                 <span>Project brief</span>
                 <textarea name="message" rows="5" required></textarea>
               </label>
             </div>
+
             <div class="contact-actions">
               <button class="btn btn-primary" type="submit">Start a conversation</button>
               <button class="btn btn-secondary" type="button" data-copy-email="egzon@oninova.net">Copy email</button>
@@ -381,18 +331,21 @@
 
           <div class="contact-meta">
             <div class="contact-meta-item">
-              <span>Phone</span>
-              <p><a href="tel:+38975461984" class="text-link contact-phone">+389 75 461 984</a></p>
+              <span>Email</span>
+              <p><a href="mailto:egzon@oninova.net" class="text-link">egzon@oninova.net</a></p>
             </div>
             <div class="contact-meta-item">
-              <span>Social</span>
+              <span>Phone</span>
+              <p><a href="tel:+38975461984" class="text-link">+389 75 461 984</a></p>
+            </div>
+            <div class="contact-meta-item">
+              <span>Links</span>
               <div class="contact-links">
                 <a href="https://oninova.net/" class="text-link" target="_blank" rel="noreferrer">Oninova</a>
                 <a href="https://github.com/egzonkadrija" class="text-link" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/egzon-kdr/" class="text-link" target="_blank" rel="noreferrer">LinkedIn</a>
               </div>
             </div>
-            <p class="contact-note">Usually replying within 1-2 business days.</p>
           </div>
         </div>
       </div>
@@ -400,11 +353,9 @@
   </main>
 
   <footer class="site-footer">
-      <div class="container footer-row">
-        <div class="footer-copy">
-          <p>Focused portfolio, product-minded execution, and calm interaction design.</p>
-          <p>&copy; <span data-current-year>2026</span> Egzon Kadrija.</p>
-        </div>
+    <div class="container footer-row">
+      <p>Focused work. Clean execution.</p>
+      <p>&copy; <span data-current-year>2026</span> Egzon Kadrija.</p>
     </div>
   </footer>
 

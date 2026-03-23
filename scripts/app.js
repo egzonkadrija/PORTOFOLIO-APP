@@ -5,9 +5,18 @@ const navLinks = Array.from(document.querySelectorAll(".nav-link"));
 const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
 const trackedSections = Array.from(document.querySelectorAll("[data-section]"));
 const parallaxItems = Array.from(document.querySelectorAll("[data-parallax]"));
+const projectTriggers = Array.from(document.querySelectorAll("[data-project-trigger]"));
 const toast = document.querySelector("[data-toast]");
 const yearTarget = document.querySelector("[data-current-year]");
 const contactForm = document.querySelector("[data-contact-form]");
+const projectImageTarget = document.querySelector("[data-project-image-target]");
+const projectLabelTarget = document.querySelector("[data-project-label-target]");
+const projectTitleTarget = document.querySelector("[data-project-title-target]");
+const projectRoleTarget = document.querySelector("[data-project-role-target]");
+const projectSummaryTarget = document.querySelector("[data-project-summary-target]");
+const projectTagsTarget = document.querySelector("[data-project-tags-target]");
+const projectLiveTarget = document.querySelector("[data-project-live-target]");
+const projectCodeTarget = document.querySelector("[data-project-code-target]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(pointer: fine)");
 
@@ -51,7 +60,7 @@ function setActiveNav() {
     return;
   }
 
-  const scrollPosition = window.scrollY + 140;
+  const scrollPosition = window.scrollY + 160;
 
   trackedSections.forEach((section) => {
     const id = section.getAttribute("id");
@@ -111,7 +120,7 @@ function setupRevealObserver() {
     },
     {
       threshold: 0.18,
-      rootMargin: "0px 0px -40px 0px",
+      rootMargin: "0px 0px -48px 0px",
     }
   );
 
@@ -128,8 +137,8 @@ function setupPosterParallax() {
       const rect = item.getBoundingClientRect();
       const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
       const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
-      const translateX = offsetX * 8;
-      const translateY = offsetY * 8;
+      const translateX = offsetX * 10;
+      const translateY = offsetY * 10;
       item.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
     });
 
@@ -137,6 +146,86 @@ function setupPosterParallax() {
       item.style.transform = "translate3d(0, 0, 0)";
     });
   });
+}
+
+function replaceProjectTags(tags) {
+  if (!projectTagsTarget) {
+    return;
+  }
+
+  projectTagsTarget.innerHTML = "";
+
+  tags
+    .split("|")
+    .map((tag) => tag.trim())
+    .filter(Boolean)
+    .forEach((tag) => {
+      const span = document.createElement("span");
+      span.textContent = tag;
+      projectTagsTarget.append(span);
+    });
+}
+
+function updateProjectPreview(trigger) {
+  if (!(trigger instanceof HTMLElement)) {
+    return;
+  }
+
+  projectTriggers.forEach((item) => {
+    const isActive = item === trigger;
+    item.classList.toggle("is-active", isActive);
+    item.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (projectLabelTarget) {
+    projectLabelTarget.textContent = trigger.dataset.projectLabel || "";
+  }
+
+  if (projectTitleTarget) {
+    projectTitleTarget.textContent = trigger.dataset.projectTitle || "";
+  }
+
+  if (projectRoleTarget) {
+    projectRoleTarget.textContent = trigger.dataset.projectRole || "";
+  }
+
+  if (projectSummaryTarget) {
+    projectSummaryTarget.textContent = trigger.dataset.projectSummary || "";
+  }
+
+  if (projectImageTarget instanceof HTMLImageElement) {
+    projectImageTarget.src = trigger.dataset.projectImage || "";
+    projectImageTarget.alt = trigger.dataset.projectAlt || "";
+  }
+
+  replaceProjectTags(trigger.dataset.projectTags || "");
+
+  if (projectLiveTarget instanceof HTMLAnchorElement) {
+    const liveUrl = trigger.dataset.projectLive || "#";
+    projectLiveTarget.href = liveUrl;
+    projectLiveTarget.target = liveUrl.startsWith("#") ? "_self" : "_blank";
+    projectLiveTarget.rel = liveUrl.startsWith("#") ? "" : "noreferrer";
+  }
+
+  if (projectCodeTarget instanceof HTMLAnchorElement) {
+    projectCodeTarget.href = trigger.dataset.projectCode || "#";
+  }
+}
+
+function setupProjectPreview() {
+  if (!projectTriggers.length) {
+    return;
+  }
+
+  projectTriggers.forEach((trigger) => {
+    const activate = () => updateProjectPreview(trigger);
+
+    trigger.addEventListener("mouseenter", activate);
+    trigger.addEventListener("focus", activate);
+    trigger.addEventListener("click", activate);
+  });
+
+  updateProjectPreview(projectTriggers[0]);
 }
 
 function setupContactForm() {
@@ -236,4 +325,5 @@ setHeaderState();
 setActiveNav();
 setupRevealObserver();
 setupPosterParallax();
+setupProjectPreview();
 setupContactForm();
