@@ -6,10 +6,10 @@
 }
 
 .site-header.is-scrolled {
-  background: rgba(4, 8, 13, 0.8);
-  border-bottom: 1px solid rgba(231, 222, 204, 0.08);
+  background: rgba(6, 9, 13, 0.82);
+  border-bottom: 1px solid rgba(245, 241, 232, 0.07);
   backdrop-filter: blur(20px);
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
 }
 
 .nav {
@@ -72,7 +72,7 @@
   right: 0;
   bottom: -7px;
   height: 1px;
-  background: var(--accent-strong);
+  background: rgba(245, 241, 232, 0.78);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition);
@@ -89,7 +89,7 @@
 }
 
 .nav-link--external {
-  color: var(--accent-strong);
+  color: var(--text-soft);
 }
 
 .nav-toggle {
@@ -99,7 +99,7 @@
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: rgba(8, 17, 25, 0.84);
+  background: rgba(9, 13, 18, 0.84);
   cursor: pointer;
 }
 
@@ -147,8 +147,8 @@
 
 .btn-primary {
   background: var(--accent);
-  color: #090d13;
-  box-shadow: var(--shadow-soft);
+  color: #0c1015;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
 }
 
 .btn-primary:hover {
@@ -157,13 +157,13 @@
 
 .btn-secondary {
   border-color: var(--line-strong);
-  background: rgba(8, 17, 25, 0.36);
+  background: rgba(9, 13, 18, 0.18);
   color: var(--text-main);
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent-strong);
-  background: rgba(213, 162, 92, 0.08);
+  border-color: rgba(245, 241, 232, 0.28);
+  background: rgba(245, 241, 232, 0.04);
 }
 
 .toast {
@@ -175,7 +175,7 @@
   padding: 14px 18px;
   border: 1px solid var(--line-strong);
   border-radius: 18px;
-  background: rgba(6, 12, 19, 0.95);
+  background: rgba(8, 11, 15, 0.95);
   color: var(--text-main);
   box-shadow: var(--shadow-soft);
   opacity: 0;

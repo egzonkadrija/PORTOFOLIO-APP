@@ -1,16 +1,16 @@
 :root {
-  --bg-main: #081119;
-  --bg-deep: #04080d;
-  --surface: rgba(10, 18, 27, 0.72);
-  --surface-strong: rgba(10, 18, 27, 0.9);
-  --line: rgba(231, 222, 204, 0.16);
-  --line-strong: rgba(231, 222, 204, 0.3);
-  --text-main: #f7f1e3;
-  --text-soft: rgba(247, 241, 227, 0.74);
-  --text-dim: rgba(247, 241, 227, 0.54);
-  --accent: #d5a25c;
-  --accent-soft: rgba(213, 162, 92, 0.16);
-  --accent-strong: #f0c07e;
+  --bg-main: #0b1116;
+  --bg-deep: #06090d;
+  --surface: rgba(13, 18, 24, 0.72);
+  --surface-strong: rgba(13, 18, 24, 0.9);
+  --line: rgba(245, 241, 232, 0.12);
+  --line-strong: rgba(245, 241, 232, 0.22);
+  --text-main: #f5f1e8;
+  --text-soft: rgba(245, 241, 232, 0.72);
+  --text-dim: rgba(245, 241, 232, 0.48);
+  --accent: #b89d79;
+  --accent-soft: rgba(184, 157, 121, 0.1);
+  --accent-strong: #d1bea1;
   --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.28);
   --shadow-lg: 0 40px 100px rgba(0, 0, 0, 0.36);
   --radius-lg: 30px;
@@ -36,10 +36,7 @@ body {
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
   color: var(--text-main);
-  background:
-    radial-gradient(circle at top left, rgba(213, 162, 92, 0.12), transparent 32%),
-    radial-gradient(circle at 85% 12%, rgba(137, 86, 42, 0.16), transparent 24%),
-    linear-gradient(180deg, #081119 0%, #050a10 46%, #04070b 100%);
+  background: linear-gradient(180deg, #0b1116 0%, #080c10 100%);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -51,8 +48,8 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
   background-size: 52px 52px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 88%);
 }
@@ -90,11 +87,11 @@ h3 {
 }
 
 ::selection {
-  background: rgba(213, 162, 92, 0.28);
+  background: rgba(245, 241, 232, 0.16);
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent-strong);
+  outline: 2px solid rgba(245, 241, 232, 0.42);
   outline-offset: 4px;
 }
 
@@ -125,7 +122,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--accent-strong);
+  color: var(--text-dim);
   font-size: 0.76rem;
   font-weight: 700;
 }
@@ -193,7 +190,7 @@ h3 {
 }
 
 .text-link:hover {
-  color: var(--accent-strong);
+  color: var(--text-soft);
 }
 
 .text-link:hover::after {
