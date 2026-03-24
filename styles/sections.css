@@ -328,6 +328,23 @@
   display: grid;
 }
 
+.about-title {
+  line-height: 0.9;
+}
+
+.about-title-indent,
+.about-title-indent-lg {
+  display: inline-block;
+}
+
+.about-title-indent {
+  padding-left: 0.58em;
+}
+
+.about-title-indent-lg {
+  padding-left: 1.02em;
+}
+
 .principle {
   display: grid;
   grid-template-columns: 80px minmax(0, 1fr);
