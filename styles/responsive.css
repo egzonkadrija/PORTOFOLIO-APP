@@ -18,6 +18,7 @@
 
   .work-preview {
     position: static;
+    margin-top: 0;
   }
 
   .preview-media {
@@ -79,7 +80,7 @@
 
   .hero {
     min-height: auto;
-    padding-top: 98px;
+    padding-top: 84px;
   }
 
   .hero-name {
@@ -125,7 +126,7 @@
   }
 
   .hero {
-    padding-top: 90px;
+    padding-top: 78px;
     padding-bottom: 28px;
   }
 
